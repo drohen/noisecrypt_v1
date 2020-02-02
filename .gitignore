@@ -1,0 +1,11 @@
+__pycache__
+*venv*
+.DS_Store
+*_nginx.conf
+log
+*.sock
+*.service
+.vscode
+icecast.xml
+*.opus
+*.wav
