@@ -68,7 +68,7 @@ randInt() {
 PORT="5482"
 TEMPDIR=$(mktemp -d)
 TEMPFILE="$TEMPDIR/test.wav"
-HOSTPORT="8080"
+HOST_PORT="2845"
 
 # Check if file isn't ready for playback
 # true if no file or the file duration is not at our length
@@ -91,7 +91,7 @@ while test $RUNNING; do
     # Ensure we have a stream URL
     while true; do
         # Get random URL from server
-        URL=$(curl -s "$HOST:$HOSTPORT")
+        URL=$(curl -s "$HOST:$HOST_PORT")
         if test "$URL" = ""; then
             echo "Could not get stream URL"
             echo "Trying again in 5 seconds..."

@@ -8,13 +8,13 @@ First time users should try getting the individual components working on a local
 
 ### Prerequisites
 
--   Some kind of linux system (this project is optimised for a raspberry pi)
--   Network access
--   Audio interface and equipment
--   Read this README and have at least one of each Host, Input and Output participants
--   This repo on your system
--   Set up the the network in the order: Host, Input, Output
--   For more information: [\_noisecrypt](http://noisecrypt.low.show)
+-   Some kind of Linux system (this project is optimised for a Raspberry Pi).
+-   Network access.
+-   Audio interface and equipment.
+-   Read this README and have at least one of each Host, Input and Output participants.
+-   This repo on your system.
+-   Set up the the network in the order: Host, Input, Output.
+-   For more information: [\_noisecrypt](http://noisecrypt.low.show).
 
 ## Host
 
@@ -22,18 +22,20 @@ The Host participants provide a server to other participants to discover each ot
 
 ### Requirements
 
--   Ensure your device is able to be accessed through your network
--   Run `./install.sh` and enter `y` when prompted to install for "Host"
+-   Ensure your device is able to be accessed through your network.
+-   Run `./install.sh` and enter `y` when prompted to install for "Host".
 
 ### Set up
 
 -   `cd host`
--   `./setup.sh`
+-   `./start.sh`
 
 ### Notes
 
--   If you make a changes to the files or need to reload, try running `./reload.sh`
--   If you need to remove the files, services and start over, try running `./remove.sh`
+-   The location to access your server on the local network is printed after the setup is completed. Please use this value when running the Input and Output start scripts. Avoid using `127.0.0.1`, `0.0.0.0` or `localhost` as these will make it impossible for other participants to find your stream on the network.
+-   `./restart.sh`: if you make a changes to the files or need to restart.
+-   `./stop.sh`: if you need to remove the files, services and start over.
+-   Advanced users: If you are able to configure your system to receive remote requests, you can provide a list of addresses that are forwarded to your system.
 
 ## Input
 
@@ -41,9 +43,9 @@ The Input participants provide a stream of audio generally from a microphone. Th
 
 ### Requirements
 
--   An existing Host participant, and their IP or URL
--   Ensure the audio input device is connected to your raspberry pi
--   Run `./install.sh` and enter `y` when prompted to install for "Input"
+-   An existing Host participant, and their IP or URL.
+-   Ensure the audio input device is connected to your Raspberry Pi.
+-   Run `./install.sh` and enter `y` when prompted to install for "Input".
 
 ### Set up
 
@@ -60,10 +62,10 @@ The Output participants stream the audio from Input participants and play a samp
 
 ### Requirements
 
--   An existing Host participant, and their IP or URL
--   An existing Input participant
--   Ensure the audio output device is connected to your raspberry pi
--   Run `./install.sh` and enter `y` when prompted to install for "Output"
+-   An existing Host participant, and their IP or URL.
+-   An existing Input participant.
+-   Ensure the audio output device is connected to your Raspberry Pi.
+-   Run `./install.sh` and enter `y` when prompted to install for "Output".
 
 ### Set up
 
@@ -79,7 +81,7 @@ The Output participants stream the audio from Input participants and play a samp
 -   If you are finding that the audio is too quiet, raspberry pi can increase this somewhat:
     -   Run: `alsamixer`
         -   Set values to max
-            -   Change devices with F6
+            -   Change devices with `F6`
             -   Switch between modes with left and right arrows
-            -   Esc to exit
+            -   `Esc` to exit
 -   **If you find any problems**, please [submit an issue](https://gitlab.com/_low_show/_noisecrypt/_noisecrypt_v1/issues) (requires an account).
