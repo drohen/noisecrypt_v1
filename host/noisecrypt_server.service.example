@@ -3,7 +3,7 @@ Description=uWSGI instance to serve noisecrypt server
 After=network.target
 
 [Service]
-User=pi
+User={{user}}
 Group=www-data
 WorkingDirectory={{path}}
 Environment="PATH={{path}}/venv/bin"

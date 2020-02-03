@@ -97,7 +97,7 @@ while test -e "$SAVE_FILE"; do
     printf -v SAVE_FILE -- '%s-%02d.opus' "$TODAY" "$(( ++COUNT ))"
 done
 
-HOST_PORT="8080"
+HOST_PORT="2845"
 
 # Send stream open cmd to API server
 
