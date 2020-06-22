@@ -1,4 +1,10 @@
-# \_noisecrypt_v1 (alpha -> still in development, not widely tested)
+# DEPRECATED
+
+This project is now at a newer version and this repo is preserved for reference only. There is no active development on this version. Please see the organisation for the latest version.
+
+-----
+
+# \_noisecrypt_v1 (alpha)
 
 [\_noisecrypt](http://noisecrypt.low.show)
 
